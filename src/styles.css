@@ -1,0 +1,56 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.NavigationBar {
+  position: relative;
+  border: 1px solid;
+  height: 50px;
+}
+.UserInfo {
+  color: gray;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid;
+  border-color: burlywood;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  right: 0px;
+  /* display: flex; */
+}
+
+.Avatar {
+  width: 15%;
+  vertical-align: middle;
+  border: 1px solid;
+  border-color: green;
+}
+
+.SignButton {
+  vertical-align: middle;
+  background-color: palevioletred;
+  color: #fff;
+  border-radius: 7px;
+  border: 0;
+  width: 65px;
+  height: 30px;
+  text-align: center;
+}
+
+.SignButton:hover {
+  color: palevioletred;
+  background-color: #fff;
+  border: 2px palevioletred solid;
+}
+
+.Clock {
+  color: gray;
+  text-align: right;
+  position: absolute;
+  bottom: 27%;
+  left: 3px;
+  border: 1px solid;
+  border-color: purple;
+}
