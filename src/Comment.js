@@ -33,13 +33,28 @@ function UserInfo(props) {
   );
 }
 
-// function Clock(props) {
-//   return <div className="Clock">{props.date.toLocaleTimeString()}</div>;
-// }
-
 class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
+
+  componentDidMount() {
+    this.timeID = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timeID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
   render() {
-    return <div className="Clock">{this.props.date.toLocaleTimeString()}</div>;
+    return <div className="Clock">{this.state.date.toLocaleTimeString()}</div>;
   }
 }
 
@@ -47,7 +62,7 @@ function NavigationBar(props) {
   return (
     <div className="NavigationBar">
       <UserInfo user={props.userInfo} />
-      <Clock date={props.date} />
+      <Clock />
     </div>
   );
 }

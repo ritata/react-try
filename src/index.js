@@ -9,8 +9,5 @@ const userInfo = {
 };
 
 const rootElement = document.getElementById("root");
-function tick() {
-  const element = <Comment userInfo={userInfo} date={new Date()} />;
-  ReactDOM.render(element, rootElement);
-}
-setInterval(tick, 1000);
+const element = <Comment userInfo={userInfo} date={new Date()} />;
+ReactDOM.render(element, rootElement);
